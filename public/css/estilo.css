@@ -1,0 +1,56 @@
+/* animacion de los iconos del menu izquierda*/
+button[aria-expanded=true] .fa-chevron-up {
+    transition: .35s transform ease-in-out;
+    transform: rotate(-90deg);
+}
+
+button:not([aria-expanded=true]) .fa-chevron-up {
+    transition: .35s transform ease-in-out;
+    transform: rotate(0deg);
+}
+
+
+/* animaciones labels forms*/
+.formulario {
+    position: relative;
+}
+.formulario-label {
+    position: absolute;
+	top: 3px;
+	left: 20px;
+	color: #999;
+	cursor: pointer;
+	transition: all .25s ease-in-out 0s;
+    pointer-events: none;
+}
+
+/* input:focus ~ .formulario-label, */
+/* input:user-valid ~ .formulario-label, */
+select:focus ~ .formulario-label {
+	top: -15px;
+	left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(to bottom, white 65%, transparent 0%);
+	color: inherit;
+	cursor: pointer;
+}
+select:valid ~ .formulario-label {
+	top: -14px;
+	left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(to bottom, white 65%, transparent 0%);
+	color: inherit;
+	cursor: pointer;
+}
+
+.form-select:valid {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+
+.select2-container {
+    min-height: 35px !important;
+}
